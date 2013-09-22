@@ -41,23 +41,23 @@ enum bd_error
 */
 
 enum bd_filesystem {
-	BD_CDDA,			// audio CDs
+	BD_CDDA,			    // audio CDs
 	BD_WINDOWS_JOLIET,		// default for data CDs
 	BD_ISO9660_31,
 	BD_ISO9660_8_3,
 	BD_UDF_DATA_DVD,		// default for data DVDs
 	BD_UDF_VIDEO_DVD,
-	BD_VCD_1_1,			// default for video disks
+	BD_VCD_1_1,			    // default for video disks
 	BD_VCD_2_0,
 	BD_SVCD
 };
 
 enum bd_disc_state {
 	BD_DISC_ERROR,			// disc could not be read
-	BD_NO_DISC,			// no disc
-	BD_EMPTY_DISC,			// empty disc
-	BD_MULTISESSION_DISC,		// multisession disc
-	BD_FULL_DISC			// disc is not empty
+	BD_NO_DISC,			    // no disc
+	BD_EMPTY_DISC,	        // empty disc
+	BD_MULTISESSION_DISC,   // multisession disc
+	BD_FULL_DISC		    // disc is not empty
 };
 
 
