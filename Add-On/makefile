@@ -56,7 +56,6 @@ SRCS=  Lava.cpp \
 		column/ColumnListView.cpp \
 		column/ColumnTypes.cpp
 
-#../LibBurnDevice/BurnDevice.cpp \
 #	specify the resource definition files to use
 #	full path or a relative path to the resource file can be used.
 RDEFS= Lava.rdef
@@ -82,7 +81,7 @@ RSRCS=
 #		and it's name
 #		library: my_lib.a entry: my_lib.a or path/my_lib.a
 #gcc2 
-LIBS= be tracker root media translation 
+LIBS= be tracker root media translation lib/libburndevice.a
 #stdc++.r4
 #gcc4
 #LIBS= be tracker root media translation stdc++ supc++
