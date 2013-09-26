@@ -54,7 +54,8 @@ SRCS=  Lava.cpp \
 		LavaFilePanel.cpp \
 		column/ColorTools.cpp \
 		column/ColumnListView.cpp \
-		column/ColumnTypes.cpp
+		column/ColumnTypes.cpp \
+		LavaBurnDeviceWindow.cpp
 
 #	specify the resource definition files to use
 #	full path or a relative path to the resource file can be used.
