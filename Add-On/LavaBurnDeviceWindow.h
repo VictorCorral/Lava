@@ -25,7 +25,7 @@ const uint32 DEVICELIST = 'TBdl';
 // the window that receives messages
 class LavaBurnDeviceWindow: public BWindow {
 	public:
-		LavaBurnDeviceWindow(BRect r, const char* name, window_type w, uint32 f);
+		LavaBurnDeviceWindow(BRect r, const char* name, window_type w, BMessage *msg);
 		virtual void MessageReceived(BMessage *msg);
 		virtual bool QuitRequested();
 		/*{

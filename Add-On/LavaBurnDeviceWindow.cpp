@@ -5,7 +5,7 @@
 #include "LavaBurnDeviceWindow.h"
 
 
-LavaBurnDeviceWindow::LavaBurnDeviceWindow(BRect r, const char* name, window_type w, uint32 f)
+LavaBurnDeviceWindow::LavaBurnDeviceWindow(BRect r, const char* name, window_type w, BMessage *msg)
 	: BWindow(BRect(100,100,700,500), "LavaBurnDevice", B_TITLED_WINDOW, 0)
 {
 	// Initialize a new BurnDevice
