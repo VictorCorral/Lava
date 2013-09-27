@@ -63,13 +63,28 @@ App::MessageReceived(BMessage* msg)
 			switch(DiscType){
 				case CDIMAGE: {
 					//(new BAlert("", "CD Image", "Exit"))->Go();
+					/*
 					BurnStatusWindow* win = new BurnStatusWindow(BrunStatusRect, 0, msg);
-					win->SetTitle("Burn Status");
+					win->SetTitle("Burn Status2");
 					//win->SetLook(B_FLOATING_WINDOW_LOOK);
 					
 					//Lock();
 					win->Show();
 					//Unlock();
+					break;
+					*/
+					LavaBurnDeviceWindow* win = new LavaBurnDeviceWindow(0);
+					/*
+                    fProjectNameString = new BString();
+					fWindowTitleString = new BString();
+					msg->FindString("PojectName", fProjectNameString);
+					*fWindowTitleString <<"Project: " <<fProjectNameString->String();
+					win->SetTitle(fWindowTitleString->String());
+					*/
+					//Lock();
+					win->Show();
+					//Unlock();
+					
 					break;
 				}
 				case DVDIMAGE: {

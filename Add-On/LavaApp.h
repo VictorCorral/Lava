@@ -35,6 +35,7 @@
 #include "LavaProjectWindow.h"
 #include "LavaBurnStatusWindow.h"
 #include "ProjectTypeSelector.h"
+#include "LavaBurnDeviceWindow.h"
 
 class App: public BApplication {
 	public:

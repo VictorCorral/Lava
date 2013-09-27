@@ -5,7 +5,7 @@
 #include "LavaBurnDeviceWindow.h"
 
 
-LavaBurnDeviceWindow::LavaBurnDeviceWindow(BRect r, const char* name, window_type w, BMessage *msg)
+LavaBurnDeviceWindow::LavaBurnDeviceWindow(BMessage *msg)
 	: BWindow(BRect(100,100,700,500), "LavaBurnDevice", B_TITLED_WINDOW, 0)
 {
 	// Initialize a new BurnDevice
@@ -65,16 +65,16 @@ void LavaBurnDeviceWindow::MessageReceived(BMessage *msg)
 			BListView *list;
 			msg->FindPointer("source",(void **) &list);
 			int i = list->CurrentSelection();
-			burn_device *bd = (burn_device*)((LavaBurnDeviceWindow*)be_app)->devList->ItemAt(i);
-			((LavaBurnDeviceWindow*)be_app)->information->SetText(bd->name.String());
-			((LavaBurnDeviceWindow*)be_app)->burner->SetBurnDevice(bd);
+			burn_device *bd = (burn_device *)devList->ItemAt(i);
+			information->SetText(bd->name.String());
+			burner->SetBurnDevice(bd);
 
 		}
 		break;
 
 		case CHECKBUTTON:
 		{
-			bd_disc_state t = ((LavaBurnDeviceWindow*)be_app)->burner->GetDiscInfo();
+			bd_disc_state t = burner->GetDiscInfo();
 			switch(t)
 			{
 				case BD_DISC_ERROR:
